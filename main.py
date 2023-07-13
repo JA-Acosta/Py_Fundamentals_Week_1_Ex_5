@@ -2,7 +2,7 @@
 >>> JAAR
 >>> 07/12/2023
 >>> Practicing Fundamentals Program 5
->>> Version 0
+>>> Version 1
 '''
 
 '''
@@ -10,7 +10,17 @@
 '''
 
 def main() :
-    print('Hello World!')
+    print('Fizz Buzz program!! Activate:')
+    for n in range(1, 101) :
+        punctuation = ', ' if n < 100 else '.'
+        if n % 3 != 0 and n % 5 != 0 :
+            print(n, end = punctuation)
+        elif n % 5 != 0 and n % 3 == 0 :
+            print('Fizz', end = punctuation)
+        elif n % 3 != 0 and n % 5 == 0 :
+            print('Buzz', end = punctuation)
+        else :
+            print('FizzBuzz', end = punctuation)
 
 if __name__ == '__main__' :
     main()
